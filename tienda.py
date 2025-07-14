@@ -1,19 +1,13 @@
 class Producto:
     def __init__(self, codigo, nombre, precio):
-        """
-        COMPLETAR 1:
-        Asigna los parámetros a los atributos
-        """
-        pass
+        self.codigo = "PROD001"
+        self.nombre = "Teclado Mecanico"
+        self.precio = 75.50
 
     def __str__(self):
-        """
-        COMPLETAR 2:
-        Devuelve un string con el formato especificado, usando f-string.
-        Asegúrate de que el precio se muestre con 2 decimales.
-        Ejemplo de formato: "[PROD001] Teclado Mecánico - Precio: 75.50 €
-        """
-        pass
+        msg = f"{self.codigo} {self.nombre} - {self.precio} €"
+
+        return msg
 
 
 def buscar_producto(inventario, codigo_buscar):
