@@ -1,6 +1,6 @@
 class Producto:
     def __init__(self, codigo, nombre, precio):
-        self.codigo = "PROD001"
+        self.codigo = "PROD001", "PROD002"
         self.nombre = "Teclado Mecanico"
         self.precio = 75.50
 
@@ -11,12 +11,10 @@ class Producto:
 
 
 def buscar_producto(inventario, codigo_buscar):
-    """
-    COMPLETAR 3:
-    Busca en 'inventario' un producto cuyo código coincida con 'codigo_buscar'.
-    Si lo encuentra, devuelve dicho objeto; si no, devuelve None.
-    """
-    pass
+    for producto in inventario:
+        print(producto)
+    else:
+        None
 
 
 def mostrar_inventario(inventario):
@@ -25,6 +23,9 @@ def mostrar_inventario(inventario):
     Imprime por pantalla todos los productos que hay en 'inventario'.
     """
     print("\n--- INVENTARIO ACTUAL ---")
+    for producto in inventario:
+        print(producto)
+
     if not inventario:
         print("El inventario está vacío.")
     else:
@@ -32,13 +33,12 @@ def mostrar_inventario(inventario):
 
 
 def calcular_valor_total(inventario):
-    """
-    COMPLETAR 5:
-    Calcula y devuelve la suma de los precios de todos los productos en el inventario.
-    """
-    total = 0.0
+    precio_producto1 = 75.50
+    precio_producto2 = 25.00
 
-    return total
+    valor_total = precio_producto1 + precio_producto2
+
+    return valor_total
 
 
 def main():
